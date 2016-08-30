@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="KejunLiu">
+</head>
+<body>
+	<h1>Registration</h1>
+	<script type="text/javascript">
+	function validate(){
+
+		var nm=document.forms["myform"]["aname"].value;
+		console.log(nm);
+		var em=document.forms["myform"]["email"].value;
+		var pn=document.forms["myform"]["phone"].value;
+		var bth=document.forms["myform"]["birthday"].value;
+		var pw=document.forms["myform"]["pwd"].value;
+		var pwc=document.forms["myform"]["pwdcmf"].value;
+		var zip=document.forms["myform"]["zip"].value;
+
+		var nmreg=/[a-zA-Z][a-z0-9A-Z]*/;
+		if(!nmreg.test(nm)){
+
+			window.alert("Account name is not valid! A valid account name can only be upper or lower case letters and numbers, but may not start with a number.");
+			return false;
+		}
+		
+		var emreg=/\w+@\w+.\w{2,4}/;
+		if(!emreg.test(em)){
+			alert("Invalid Email Address! A valid email address should be like XXX@XXX.XXX");
+			return false;
+		}
+
+		var pnreg=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		if(!pnreg.test(pn)){
+			alert("Invalid phone number! A valid phone number should be like 123-123-1234  or 123.123.1234 or 123 123 1234.");
+			return false;
+		}
+
+		var zipreg=/[0-9]{5}/;
+		if(!zipreg.test(zip)){
+			alert("Invalid zip code! Zip code should contain 5 digits.");
+			return false;
+		}
+		var today=new Date();
+		var month=today.getMonth()+1;
+		var date=today.getDate();
+		var bthreg=/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+		if(!bthreg.test(bth)){
+			alert("Invalid birthday input! Your birthday should be like 01/01/1994");
+			return false;
+		}
+		var age=today.getFullYear()-bth.substring(6,10)-1;
+		if(month>bth.substring(0, 2) || month==bth.substring(0,2) && date >= bth.substring(3, 5)){
+			age++;
+		}
+		if(age < 18){
+			alert("You are under 18. Registration is open to 18+.");
+			return false;
+		}
+		if(pw!=pwc){
+			alert("Password Comfirmation is not equal to password!");
+			return false;
+		}
+		return true;
+	}
+	
+	</script>
+	<form name="myform" action="FormProcessor.html" method="GET">
+		<p><b>Account Name</b></p>
+		<input type="text" name="aname" required placeholder="Account Name"/></br>
+		<p><b>Display Name</b></p>
+		<input type="text" name="dname" placeholder="Display Name"/></br>
+		<p><b>Email Address</b></p>
+		<input type="text" name="email" required placeholder="xxx@xxx.xxx"/></br>
+		<p><b>Phone Number</b></p>
+		<input type="text" name="phone" required placeholder="123-123-1234"/></br>
+		<p><b>Date of Birth</b></p>
+		<input type="text" name="birthday" required placeholder="mm/dd/yy"/></br>
+		<p><b>Zip Code</b></p>
+		<input type="text" name="zip" required placeholder="Zip Code"/></br>
+		<p><b>Password</b></p>
+		<input type="password" name="pwd" required/></br>
+		<p><b>Password Comfirmation</b></p>
+		<input type="password" name="pwdcmf" required/></br>
+		<input type="submit" name="submit" value="submit" onclick="return validate()"/>
+		<input type="reset" name="clear" value="clear"/>
+		<input type="hidden" name="timestamp" id="timestamp" value="" onload="this.value=timestamp()"/></br>
+	</form>
+	<script type="text/javascript">
+	function timestamp(){
+		var time=(new Date()).getTime();
+		console.log(time);
+		document.getElementById("timestamp").value=time;
+	}
+	timestamp();//important
+	</script>
+	
+</body>
+</html>
