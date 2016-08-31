@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Hello HTML!</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+<table border="1">
+	<tr><td>Athenian</td><td>Owl</td></tr>
+	<tr><td colspan="2"><img src="http://explore.rice.edu/uploadedImages/Explore/Welcome_to_Rice/riceacademicseal1.jpg"></td></tr>
+</table>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<ul>
+	<li><a href="http://www.rice.edu">Rice</a></li>
+	<li><a href="http://www.chron.com">Houston Chronicle</a></li>
+	<li><a href="http://www.twitter.com">Twitter</a></li>
+	<li><a href="http://www.twosigma.com">TwoSigma</a></li>
+</ul>
+
+<textarea id="area" rows="10" cols="50">
+
+
+ --- Enter your message here --- 
+
+
+</textarea>
+</br>
+<button type="button" id="clear" onclick="return bfunction(this)">Clear</button>
+<button type="button" id="pause" onclick="return pause()">Pause</button>
+<button type="button" id="resume" onclick="return resume()">Resume</button>
+<span id="indicator">15 seconds...</span>
+<script type="text/javascript">
+
+function bfunction(element){
+	clearText();
+	myTimeout(element, 5000);
+}
+
+function clearText(){
+	document.getElementById("area").value="";
+}
+function myTimeout(element, timeout){
+	setTimeout(function(){alert("the page will redirect when the counter reaches zero.");}, timeout);
+	return false;
+}
+// function myfunction(element){
+// 	window.location = element.href;
+// }
+var t=setInterval('ifunction()', 1000);
+var second=15;
+function ifunction(){
+	if(second==0){
+		clearInterval(t);
+		window.location.href="hello.html";
+	}else{
+		second-- ;
+		console.log(second);
+		var indicator=document.getElementById("indicator");
+		indicator.innerHTML=second;
+	}
+	console.log(second);
+}
+function pause(){
+	clearInterval(t);
+	return false;
+}
+function resume(){
+	setInterval('ifunction()', 1000);
+	return false;
+}
+</script>
+</body>
+</html>
