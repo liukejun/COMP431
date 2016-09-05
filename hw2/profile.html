@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kejun Liu">
+	<title>Profile</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<h1>Profile</h1>
+	<div class="input_area">
+		<table class="profile">
+			<col width="250">
+			<col width="250">
+			<col width="200">
+		
+			<tr>
+				<td><span class ="hint" id="nm_hint">Display Name:</span></td>
+				<td><input class="in" type="text" name="nm_txt" id="nm_txt"> </td>
+				<td><span class="current" id="nm_current">Kejun Liu</span></td>
+			</tr>
+			<tr>
+				<td><span class ="hint" id="em_hint">Email Address:</span></td>
+				<td><input class="in" type="text" name="em_txt" id="em_txt"></td>
+				<td><span class="current" id="em_current">kl50@rice.edu</span></td>
+			</tr>
+			<tr>
+				<td><span class ="hint" id="pn_hint">Phone Number:</span></td>
+				<td><input class="in" type="text" name="pn_txt" id="pn_txt"></td>
+				<td><span class="current" id="pn_current">2817028865</span></td>
+			</tr>
+			<tr>
+				<td><span class ="hint" id="zip_hint">Zip Code:</span></td>
+				<td><input class="in" type="text" name="zip_txt" id="zip_txt"></td>
+				<td><span class="current" id="zip_current">77005</span></td>
+			</tr>
+			<tr>
+				<td><span class ="hint" id="pw_hint">Password:</span></td>
+				<td><input class="in" type="password" name="pw_txt" id="pw_txt"></td>
+				<td><span class="current" id="pw_current"></span></td>
+			</tr>
+			<tr>
+				<td><span class ="hint" id="pwc_hint">Password Confirmation:</span></td>
+				<td><input class="in" type="password" name="pwc_txt" id="pwc_txt"></td>
+				<td><span class="current" id="pwc_current"></span></td>
+			</tr>
+		</table>
+	</div>
+	<input class="submit" type="button" name="submit_bt" value="Submit" onclick="return updateProfile()"></br>
+	<input class="return" type="button" name="return_bt" value="Previous Page" onclick="return returnPrevious()">
+	<script type="text/javascript" src="profile.js?ver=1"></script>
+</body>
+</html>

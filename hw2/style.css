@@ -1,0 +1,78 @@
+h1{
+	color:#000080;
+	text-align: center;
+}
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: red;
+}
+table.main {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td.main, th.main {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr.main:nth-child(even) {
+    background-color: #dddddd;
+}
+input.Stop{
+	background-color: #f44336;
+	color:white;
+	text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+}
+table.profile{
+    border: 3px solid #32cd32;
+    margin:auto;
+    border-collapse:separate; 
+    border-spacing:0px 10px;
+}
+span.hint{
+    padding-left: 14px;
+    font-size:20px;
+}
+input.in{
+    font-size:15px;
+}
+input.submit{
+    background-color: #32cd32;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-left:550px;
+    margin-top: 20px;
+
+}
+input.return{
+    background-color: #f44336;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+div.owl_div{
+    background-color:black;
+    color:white;
+    padding:20px;
+    height:280px;
+}
