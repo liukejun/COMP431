@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kejun Liu">
+	<title>Game - Avoid the Mouse</title>
+</head>
+<style type="text/css">
+	div.area{
+		position:absolute;
+   		top:150px;
+    	left:100px;
+    	border: 3px solid #48d1cc;
+    	height:100px;
+    	width:200px;
+	}
+	input{
+		position:absolute;
+		top:30px;
+		left:30px;
+		background-color: #f44336;
+		color:white;
+		text-align: center;
+    	text-decoration: none;
+    	border: none;
+   		padding: 15px 32px;
+    	font-size: 15px;
+	}
+	div.successText{
+		font-size: 40px;
+		color: #f44336;
+	}
+</style>
+<body>
+<center>
+<div class="successText" id="successText" style="display:none">
+	<p>Congratulations!</p>	
+	<p>You Won!</p>
+</div>
+</center>
+<div class="area" id="greyArea">
+	<input class="btn" type="button" name="target" id="targetButton" value="Click Me">
+</div>
+	
+</body>
+<script type="text/javascript" src="avoid.js"></script>
+</html>
