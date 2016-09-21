@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Profile Page</title>
+  <meta charset="utf-8">
+  <meta name="author" content="KejunLiu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="profile.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Rice Book</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="main.html">Home</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#"><span><img src="../images/photo.jpeg"  height="20" width="20" alt="Avatar" ></span>  My Profile</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+        <li><a href="index.html">Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="../images/cover.png" alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail" src="../images/photo.jpeg" alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <h1 id="displayName">Kejun Liu</h1>
+            <p id="state">A new version of me.</p>
+        </div>
+        <label class="btn btn-green btn-file">
+            <span class="glyphicon glyphicon-camera"></span>
+                Change Profile Photo <input class="chgphoto" type="file" style="display: none;">
+        </label>
+    </div>
+</div> <!-- /container -->  
+<div class="container text-center main-content">
+	<div class="row">
+		<!-- current info -->
+		<div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-4 well well-transparent">
+			<p class="BoldFont">Current Information</p><hr>
+			
+			<p class="info text-center" ><span class="glyphicon glyphicon-user"> Account Name: 
+        <span id="current-accountName">Kejun Liu</span></span> </p>
+			<p class="info text-center" ><span class="glyphicon glyphicon-eye-open"> Display Name: 
+        <span id="current-displayName">Kejun Liu</span></span> </p>
+			<p class="info text-center" ><span class="glyphicon glyphicon-phone"> Phone Number: 
+        <span id="current-phoneNumber">1231231234</span></span> </p>
+			<p class="info text-center" ><span class="glyphicon glyphicon-send"> Email Address: 
+        <span id="current-emailAddress">123@test.com</span></span> </p>
+			<p class="info text-center" ><span class="glyphicon glyphicon-home"> Zip Code: 
+        <span id="current-zipCode">77005</span></span> </p>
+			<p class="info text-center" ><span class="glyphicon glyphicon-calendar"> Birthday: 
+        <span id="current-birthday">April 6th, 1994</span></span> </p>
+
+		</div>
+		<!-- update info -->
+		<div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-6 well well-transparent">
+			<p class="BoldFont">Update Information</p><hr>
+
+			<p class="info text-center"><span class="glyphicon glyphicon-user"> 
+				 <input class="input-update" type="text" name="accountname" id="update-accountName" placeholder="Account Name">
+			</span> </p>
+			<p class="info text-center"><span class="glyphicon glyphicon-eye-open">
+				 <input class="input-update" type="text" name="displayname" id="update-displayName" placeholder="Display Name">
+			</span> </p>
+			<p class="info text-center"><span class="glyphicon glyphicon-phone">
+				<input class="input-update" type="number" name="phonenumber" id="update-phoneNumber" placeholder="Phone Number">
+			</span> </p>
+			<p class="info text-center"><span class="glyphicon glyphicon-send">
+				<input class="input-update" type="text" name="emailaddress" id="update-emailAddress" placeholder="Email Address">
+			</span> </p>
+			<p class="info text-center"><span class="glyphicon glyphicon-home">
+				<input class="input-update" type="number" name="zipcode" id="update-ZipCode" placeholder="Zip Code">
+			</span> </p>
+			<p class="info text-center"><span class="glyphicon glyphicon-lock">
+				<input class="input-update" type="text" name="password" id="update-password" placeholder="Password">
+			</span> </p>
+      <p class="info text-center"><span class="glyphicon glyphicon-lock">
+        <input class="input-update" type="text" name="passwordcfm" id="update-password-comfirm" placeholder="Comfirm Password">
+      </span> </p>
+			<button class="btn btn-green" onclick="return updateProfile()">Update Information</button>
+		</div>
+</div>
+</div>
+<footer class="container-fluid text-center">
+  <p>2016, Kejun Liu. Version 1.0</p>
+</footer>
+</body>
+</html>

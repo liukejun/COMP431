@@ -1,0 +1,166 @@
+/* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+.name-in-profile{
+	font-size:30px;
+	color:black;
+	font-weight: bold;
+}
+.status-in-profile{
+	font-size:15px;
+	color:black;
+
+}
+.well-white{
+	background-color: white;
+	margin-left: 0px;
+}
+body{
+	background-color: #f5f5f5;
+}
+.inputText_fixedWidth{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom-color: #f5f5f5;
+	width:150px;
+}
+.btn-update-in-profile{
+	border:none;
+	background-color:#1abc9c;
+	color:white;
+	border-radius: 5px;
+	
+}
+.btn-grey{
+	border-color: #d3d3d3;
+	background-color:#f5f5f5;
+	color:#808080;
+	font-weight:bold;
+	border-radius: 7px;
+	border-width: 1px;
+	border-bottom-color: #d3d3d3;
+}
+.title-in-section{
+	font-weight: bold;
+	color:#808080;
+	font-size:25px;
+
+}
+.glyphicon-user{
+	color:#dcdcdc;
+}
+.status-in-profile-friend{
+	font-size:12px;
+	color:black;
+	margin-left: 10px;
+}
+.location-shortview{
+	color:#808080;
+	position:absolute;
+	top:20px;
+	left:0px;
+
+}
+.username-in-friend{
+	position:absolute;
+	top:0px;
+	left:15px;
+}
+.friend-shortview{
+	margin-top: 5px;
+}
+.well-image-post{
+	background-color: white;
+	height:100px;
+}
+.inputpost{
+	position:absolute;
+	top:0px;
+	width:100%;/*make the textarea fill the parent*/
+	height:100%;
+	border:none;
+	left:1px;
+}
+.btn-cancel{
+	width:200px;
+	background-color:#f5f5f5;
+	color:#808080;
+	font-weight:bold;
+	border-radius: 7px;
+	border-width: 1px;
+	border-bottom-color: #d3d3d3;
+	border:solid #d3d3d3;
+	border-width: 1px
+}
+.btn-post{
+	width:200px;
+	border:none;
+	background-color:#1abc9c;
+	color:white;
+	border-radius: 7px;
+	font-weight:bold;
+}
+.well-article{
+
+	margin-left: 1px;
+	margin-right: 1px;
+	border-top: none;
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+	border-bottom: none;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.article-image{
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	height: 150px;
+	width: 150px;
+}
+.find-more{
+	color:#00008b;
+	font-size: 14px;
+}
+.btn-fix-width{
+	border:none;
+	background-color:#1abc9c;
+	color:white;
+	border-radius: 5px;
+	width:85px;
+}
+.title-recommend{
+	color:#808080;
+	font-weight:bold;
+}
+
+
+/* Changes the position of the indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+.recommend{
+	width:100%;
+	border:0;
+}
+.timeStamp{
+	color:grey;
+	font-size: 13px;
+}

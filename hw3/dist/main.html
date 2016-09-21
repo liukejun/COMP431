@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Main Page</title>
+  <meta charset="utf-8">
+  <meta name="author" content="KejunLiu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body class="body">
+<!-- nav content -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Rice Book</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#" onclick="toProfilePage()"><span><img src="../images/photo.jpeg"  height="20" width="20" alt="Avatar" ></span>  My Profile</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+        <li><a href="index.html">Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- main contents of main page -->
+<div class="container text-center main-content">
+  <div class="row main-content">
+    <!-- left bar -->
+    <div class="row col-xs-12 col-sm-12 col-md-3 col-lg-3 well well-white">
+
+      <!--- Current user section -->
+      <div class="col-sm-12 col-xs-offset-3 well well-white">
+        <img src="../images/photo.jpeg"  class="img-responsive" alt="Avatar">
+        <p class="name-in-profile" id="user-info-displayName">Kejun Liu</p>
+        <p id="current-state" class="status-in-profile">A new version of me</p>
+        <!-- update state line -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+            <input type="text" class="inputText_fixedWidth" name="mystatus" id="mystatus" value="" placeholder="What's new today?">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+             <button class="btn-update-in-profile" onclick="updateState()">Update</button>
+          </div>
+        </div>
+      </div>
+      <!-- end of current user section -->
+
+      <!-- Friends section title -->
+      <div class="friends">
+        <p class="title-in-section"><span class="glyphicon glyphicon-user"></span>  Friends</p>
+      </div>
+
+      <!-- Friends section -->
+      <div class="well-white">
+        <!-- friend 1 -->
+        <div class="well-white friend-shortview">
+          
+          <!-- photo & short discription -->
+          <div class="row">
+            <!-- photo -->
+            <div class=" col-xs-5 col-md-5 col-ms-5 col-lg-5">
+              <img class="photo-in-friend img-responsive" src="../images/friend1.JPG" alt="Avatar" >
+            </div>
+            <!-- short discription -->
+            <div class="col-md-7 col-ms-7 col-xs-7">
+              <p class="username-in-friend"><a href="#">Chris</a></p>
+              <p class="location-shortview"><span class="glyphicon glyphicon-home"></span> Texas, USA</p>
+            </div>
+          </div>
+          <!-- status -->
+          </br>
+          <div class="row status-in-profile-friend text-left">
+            <p ><span class="glyphicon glyphicon-heart"></span> Great day at Rice Football Game!</p>
+          </div>
+          <!-- Unfollow button -->
+          <div class="text-right">
+            <button type="button" class="btn btn-grey btn-sm">
+              <span class="glyphicon glyphicon-remove"></span> Unfollow
+            </button>
+          </div>
+        </div>
+        <hr>
+        <!-- friend 2 -->
+        <div class="friend-shortview">
+          <!-- photo & short discription -->
+          <div class="row">
+            <!-- photo -->
+            <div class="col-xs-5 col-md-5 col-ms-5 col-lg-5">
+              <img class="photo-in-friend img-responsive" src="../images/friend2.jpeg" alt="Avatar">
+            </div>
+            <!-- short discription -->
+            <div class="col-md-7 col-ms-7 col-xs-7">
+              <p class="username-in-friend"><a href="#">Pooh</a></p>
+              <p class="location-shortview"><span class="glyphicon glyphicon-home"></span> Minnesota, USA</p>
+            </div>
+          </div>
+
+          <!-- status -->
+          </br>
+          <div class="row status-in-profile-friend text-left">
+            <p><span class="glyphicon glyphicon-heart"></span> Busy week.</p>
+          </div>
+          <!-- Unfollow button -->
+          <div class="text-right">
+            <button type="button" class="btn btn-grey btn-sm">
+              <span class="glyphicon glyphicon-remove"></span> Unfollow
+            </button>
+          </div>
+        </div>
+        <hr>
+        <!-- friend 3 -->
+        <div class="friend-shortview">
+          <!-- photo & short discription -->
+          <div class="row">
+            <!-- photo -->
+            <div class="col-xs-5 col-md-5 col-ms-5 col-lg-5">
+              <img class="photo-in-friend img-responsive" src="../images/friend3.jpg" alt="Avatar">
+            </div>
+            <!-- short discription -->
+            <div class="col-md-7 col-ms-7 col-xs-7">
+              <p class="username-in-friend"><a href="#">Kiki</a></p>
+              <p class="location-shortview"><span class="glyphicon glyphicon-home"></span> Chengdu, China</p>
+            </div>
+          </div>
+          <!-- status -->
+          </br>
+          <div class="row status-in-profile-friend text-left">
+            <p><span class="glyphicon glyphicon-heart"></span> Love my life!</p>
+          </div>
+          <!-- Unfollow button -->
+          <div class="text-right">
+            <button type="button" class="btn btn-grey btn-sm">
+              <span class="glyphicon glyphicon-remove"></span> Unfollow
+            </button>
+          </div>
+        </div>
+        <hr>
+      </div>
+      </br>
+      <!-- Add friend -->
+      <div class="row">
+          <div class="col-md-9">
+            <input class="inputText_fixedWidth" type="text" name="findFriend" id="findFriend" value="" placeholder="Find new friend">
+          </div>
+          <div class="col-md-3">
+             <span><button class="btn-update-in-profile">Add</button></span>
+          </div>
+      </div>
+    </div>
+
+    <!-- middle part -->
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+      
+      <div class="row well well-white">
+      <!-- UPdate state :photo & post -->
+        
+        <div class="row">
+          <!-- Upload picture -->
+          <div class="col-md-5 well well-image-post text-center">
+            <label class="btn btn-update-in-profile btn-file">
+              <span class="glyphicon glyphicon-plus"></span>
+                Add Image <input type="file" style="display: none;">
+            </label>
+          </div>
+          <!-- Post -->
+          <div class="col-md-7 well well-image-post">
+            <textarea id="postContent" name="inputPost" class="inputpost">Your post here</textarea>
+          </div>
+        </div>
+        <!-- Upload Buttons -->
+        <div class="row">
+          <div class="col-md-6">
+            <button class="btn-cancel" onclick="clearPost()">Cancel</button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn-post">Post</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Search article -->
+      <div class="row well well-white">
+        <form role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      </div>
+      
+      
+        
+      <!-- article 1 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Scott</p>
+           <img src="../images/article1.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On January 1, Scott said: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- article 2 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Joe</p>
+           <img src="../images/article2.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On December 2, Joe said: Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit. 
+            </a><a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- article 3 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Max</p>
+           <img src="../images/article3.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On November 3, Max said: Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a, euismod mauris.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      
+      </article>
+
+      <!-- article 4 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Eric</p>
+           <img src="../images/article4.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On October 4, Eric said: Sed dictum malesuada ipsum, eget ornare enim molestie in. In id faucibus eros, at dapibus sem. Proin commodo nibh est, at porta magna auctor eu. Nunc sed elementum mauris. Mauris sollicitudin, nisl at finibus iaculis, velit diam ullamcorper arcu, quis luctus massa risus id turpis.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- article 5 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Scott</p>
+           <img src="../images/article5.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On September 5, Scott said: Suspendisse sed vestibulum eros. Proin gravida quam id magna dictum, sed finibus arcu scelerisque. Phasellus varius urna eu ultricies ultrices. Curabitur pulvinar sit amet nisl vel hendrerit. Sed vestibulum tortor et mollis hendrerit. 
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+      
+      <!-- article 6 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Joe</p>
+           <img src="../images/article6.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On August 6, Joe said: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- article 7 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Max</p>
+           <img src="../images/article7.png"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On July 7, Max said: Aenean eget tortor et ipsum convallis convallis non sit amet massa. Donec nec vestibulum sem. Sed et est molestie, congue magna vitae, aliquet lacus. Ut in scelerisque ante. Curabitur ultricies est id consectetur suscipit.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- article 8 -->
+      <article class="row well well-white">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <div class="">
+           <p>Eric</p>
+           <img src="../images/article8.jpg"  height="90" width="90" alt="Avatar" class="img-circle">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-7">
+          <div class="text-left">
+            <span class="timeStamp">September 20, 2016</span>
+            <p>On June 8, Eric said: Curabitur quis malesuada neque. Nulla quis mi congue, auctor ante id, cursus nunc. Vivamus dui nisl, pharetra quis risus eu, mattis congue mi. In pellentesque hendrerit eros eget porta. Praesent ut metus suscipit, aliquam arcu a, euismod mauris.
+            <a href="#" class="find-more">More>></a></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+          <div class="">
+            </br><button class="btn-fix-width">Comment</button></br></br>
+            <button class="btn-fix-width">Edit</button>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 well well-white">
+      <p class="title-recommend text-left">Recommend</p>
+      <hr>
+      <div>
+        <a href="http://www.janeausten.org/pride-and-prejudice/pride-and-prejudice-online.asp">
+        <img class="img-responsive" src="../images/recommend1.jpg" class="recommend">
+        <p>Pride and Prejudice</p>
+        </a>
+      </div>
+      
+
+      <hr>
+      <a href="http://onlinepdf.co/read-online-snow-white-and-the-huntsman-by-lily-blake.html">
+      <img class="img-responsive" src="../images/recommend2.jpg" class="recommend">
+      <p>Snow White and the Huntsman</p>
+      </a>
+
+      <hr>
+      <a href="http://movies.disney.com/inside-out">
+      <img class="img-responsive" src="../images/recommend3.jpg" class="recommend">
+      <p>Inside Out</p>
+      </a>
+
+      <hr>
+      <a href="https://en.wikipedia.org/wiki/Lucy_(2014_film)">
+      <img class="img-responsive" src="../images/recommend4.jpg" class="recommend">
+      <p>Lucy</p>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>2016, Kejun Liu. Version 1.0</p>
+</footer>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
+
