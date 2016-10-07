@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="KejunLiu">
+	<title>Advanced Tetris - KejunLiu</title>
+	<link rel="shortcut icon" type="image/x-icon" href="Tetris.ico" />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="panel">
+		<div class="welcome_panel">
+			<span class="text_welcome"><img src="https://cdn0.iconfinder.com/data/icons/geek-zone-icons-rounded/110/Tetris-128.png" width="30px" height="30px">      Welcome to Tetris World!</span>
+		</div>
+		<div class="control_panel">
+			<button class="btn_primary_start" id="btn_start">START GAME</button>
+			<button class="btn_primary_pause" id="btn_pause" disabled>PAUSE</button>
+			<button class="btn_primary_quit" id="btn_quit" disabled>QUIT GAME</button>
+			
+		</div>
+		<div class="display_panel">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+				<hr>
+				<p class="text_hint_yellow">Instruction (keyboard)</p>
+				<p class="text_hint"> Rotate:  <span class="glyphicon glyphicon-arrow-up"></span></p>
+				<p class="text_hint"> Move: <span class="glyphicon glyphicon-arrow-left"></span> 
+				<span class="glyphicon glyphicon-arrow-down"></span> 
+				<span class="glyphicon glyphicon-arrow-right"></span></p>
+				<hr>
+				<p class="text_hint_yellow">Hint</p>
+				<p class="text_hint">Delete one line, get  points <span class="text_hint_yellow" id="hint_score">10</span> in this level. </p>
+				<p class="text_hint">To get to next level, your total score should reach <span id="hint_goal" class="text_hint_yellow">80</span> points.</p>
+				<p class="text_hint">Sometimes, you get a block dropping very fast, <span
+				class="text_hint_yellow">watch out!</span></p>
+				<p class="text_hint">Higher level, blocks drop faster!</p>
+				<hr>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 tetrisContainer">
+			<button class="moveBtn" id="btn_rotate" disabled="true"><span class="glyphicon glyphicon-arrow-up btn"></span> </button>
+			<button class="moveBtn" id="btn_left" disabled="true"><span class="glyphicon glyphicon-arrow-left btn"></span> </button>
+			<button class="moveBtn" id="btn_down" disabled="true"><span class="glyphicon glyphicon-arrow-down btn"></span> </button>
+			<button class="moveBtn" id="btn_right" disabled="true"><span class="glyphicon glyphicon-arrow-right btn"></span></button>
+			<p class="text_hint">Score : <span class="text_hint" id="p_score">0</span>
+			;   Level  : <span class="text_hint" id="p_level">1</span></p>
+				<table id="area" cellspacing="0" cellpadding="0" border="1" style="border-collapse:collapse"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>
+			</div>
+			<div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
