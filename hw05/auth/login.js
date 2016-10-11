@@ -6,7 +6,7 @@ import {Nav, NavHeader, Navbar, NavItem, NavDropdown, MenuItem, Tooltip} from 'r
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 import {validateLoginName, validateLoginPassword} from './landinglogic.js';
-
+import { login } from '../dummy.js'
 class Login extends React.Component{
     constructor(props) {
       super(props);
@@ -19,6 +19,10 @@ class Login extends React.Component{
       var nm=this.refs.username.value;
       var pwd=this.refs.password.value;
       if (validateLoginName(nm) && validateLoginPassword(pwd)){
+        var res = login().then(function(result){
+          console.log(result);
+        });
+        //console.log(res);
         var val = "Main_Page";
         this.props.update(val);
       } else {
@@ -47,7 +51,7 @@ class Login extends React.Component{
             <Nav pullRight>
               <NavItem eventKey={1} href="#" className="navbar-form navbar-right">
                   <div className="form-group">
-                      <input type="text" className="form-control" ref="username" placeholder="Username"/>
+                      <input type="text" className="form-control" id="loginUsername" ref="username" placeholder="Username"/>
                       {
                       !this.state.showNameTip ? null :
                       <Tooltip placement="bottom" className="in" id="tooltip-bottom">
@@ -56,7 +60,7 @@ class Login extends React.Component{
                     }
                   </div>
                   <div className="form-group">
-                    <input type="text" className="form-control" ref="password" placeholder="Password"/>
+                    <input type="text" className="form-control" id="loginPwd" ref="password" placeholder="Password"/>
                     {
                       !this.state.showPwdTip ? null :
                       <Tooltip placement="bottom" className="in" id="tooltip-bottom">
@@ -65,7 +69,7 @@ class Login extends React.Component{
                     }
                     
                   </div>
-                  <button type="submit" className="btn btn-primary" onClick={this.updateNav.bind(this)}>Sign In</button>
+                  <button type="submit" className="btn btn-primary" id="loginActionBtn" onClick={this.updateNav.bind(this)}>Sign In</button>
               </NavItem>
             </Nav>
           </Navbar.Collapse>

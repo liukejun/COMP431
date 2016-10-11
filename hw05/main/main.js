@@ -28,53 +28,6 @@ class Main extends React.Component {
 	}
 }
 
-// class MainNavBar extends React.Component {
-// 	render() {
-// 		return (
-// 			<nav className="navbar navbar-default navbar-static-top">
-// 				<div className="container-fluid">
-// 					<NavHeader />
-// 					<NavContent />
-// 				</div>
-// 			</nav>
-// 			);
-// 	}
-// }
-// class NavHeader extends React.Component {
-// 	render() {
-// 		return (
-// 			<div className="navbar-header">
-// 				<button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-// 					<span className="icon-bar"></span>
-// 					<span className="icon-bar"></span>
-// 					<span className="icon-bar"></span>
-// 					</button>
-// 					<a className="navbar-brand" href="#">Rice Book</a>
-// 			</div>
-// 			)
-// 	}
-// }
-// class NavContent extends React.Component {
-// 	render() {
-// 		return (
-// 			<div className="collapse navbar-collapse" id="myNavbar">
-// 				<ul className="nav navbar-nav">
-// 					<li className="active"><a href="#">Home</a></li>
-//         			<li><a href="#">Friends</a></li>
-//         			<li><a href="#" onClick={this.test}>
-//         				<span><img src="../images/photo.jpeg"  height="20" width="20" alt="Avatar" /></span>  My Profile</a>
-//         			</li>
-// 				</ul>
-
-// 				<ul className="nav navbar-nav navbar-right">
-// 			        <li><a href="#"><span className="glyphicon glyphicon-user"></span> My Account</a></li>
-// 			        <li><a href="index.html">Log out</a></li>
-// 			    </ul>
-// 			</div>
-// 			)
-// 	}
-// }
-
 
 class MainContent extends React.Component {
 	render() {

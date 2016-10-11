@@ -10,7 +10,7 @@ class UserSection extends React.Component {
 			<Col className="col-sm-12 col-xs-offset-3 well-white">
 				<Image src="../images/photo.jpeg"  alt="Avatar" responsive/>
         		<p className="name-in-profile" id="user-info-displayName">Kejun Liu</p>
-        		<p id="current-state" className="status-in-profile">A new version of me</p>
+        		<p className="status-in-profile" id="userinfo-current-state">A new version of me</p>
 				<UpdateState/>			
 			</Col>
 			)
