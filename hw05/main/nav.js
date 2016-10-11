@@ -3,6 +3,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Nav, NavHeader, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 class NavContent extends React.Component {
+	updateNavToMain() {
+		var val = "Main_Page";
+		this.props.update(val);
+	}
+	updateNavToLanding() {
+		var val = "Landing_Page";
+		this.props.update(val);
+	}
+	updateNavToProfile() {
+		var val = "Profile_Page";
+		this.props.update(val);
+	}
 	render() {
 		return (
 			<Navbar inverse className="navbar navbar-default">
@@ -14,8 +26,8 @@ class NavContent extends React.Component {
 			    </Navbar.Header>
 			    <Navbar.Collapse>
 			      <Nav>
-			        <NavItem eventKey={1} href="#">Home</NavItem>
-			        <NavItem eventKey={2} href="#">Profile</NavItem>
+			        <NavItem eventKey={1} onClick={this.updateNavToMain.bind(this)}>Home</NavItem>
+			        <NavItem eventKey={2} onClick={this.updateNavToProfile.bind(this)}>Profile</NavItem>
 			        <NavDropdown eventKey={3} title="Friend" id="basic-nav-dropdown">
 			          <MenuItem eventKey={3.1}>Action</MenuItem>
 			          <MenuItem eventKey={3.2}>Another action</MenuItem>
@@ -26,12 +38,14 @@ class NavContent extends React.Component {
 			      </Nav>
 			      <Nav pullRight>
 			        <NavItem eventKey={1} href="#"><span className="glyphicon glyphicon-user"></span> My Account</NavItem>
-			        <NavItem eventKey={2} href="#">Log Out</NavItem>
+			        <NavItem eventKey={2} onClick={this.updateNavToLanding.bind(this)}>Log Out</NavItem>
 			      </Nav>
 			    </Navbar.Collapse>
 			  </Navbar>
 			)
 	}
 }
-
+NavContent.propTypes = {
+      update: React.PropTypes.func.isRequired,
+  };
 export default NavContent;

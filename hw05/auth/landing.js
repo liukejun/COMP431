@@ -26,7 +26,7 @@ class Landing extends React.Component {
 							<Cover/>
 						</Col>
 						<Col className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-							<Register  stateProps = {this.props.stateProps}/>
+							<Register  update={this.update.bind(this)} onChange={this.update}/>
 						</Col>
 					</Row>
 				</Grid>

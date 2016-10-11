@@ -11,10 +11,13 @@ import PostSection from './post.js';
 import SearchArticle from '../article/searchArticle.js'
 import Article from '../article/article.js'
 class Main extends React.Component {
+	update(val) {
+		this.props.updateState(val);
+	}
 	render() {
 		return (
 			<div>
-				<NavContent />
+				<NavContent update={this.update.bind(this)} onChange={this.update}/>
 				<MainContent />
 				<Footer />
 			</div>
@@ -126,5 +129,8 @@ class Footer extends React.Component {
 			)
 	}
 }
+Main.propTypes = {
+  		updateState: React.PropTypes.func.isRequired,
+	};
 export default Main;
 export {Footer};

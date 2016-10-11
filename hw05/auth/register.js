@@ -9,7 +9,10 @@ class Register extends React.Component {
 	constructor(props) {
       super(props);
     }
-	
+	updateNav() {
+		var val = "Main_Page";
+		this.props.update(val);
+	}
 	render() {
 		return (
 			<div>
@@ -41,7 +44,7 @@ class Register extends React.Component {
 				<div className="form-group">
 					<Row>
 						<Col className="col-sm-6 col-sm-offset-3">
-							<input type="submit" name="register-submit" id="register-submit" className="form-control btn btn-register" value="Sign Up" />
+							<input type="submit" name="register-submit" id="register-submit" className="form-control btn btn-register" value="Sign Up" onClick={this.updateNav.bind(this)}/>
 						</Col>
 					</Row>
 				</div>
@@ -49,5 +52,7 @@ class Register extends React.Component {
 			);
 	}
 }
-
+Register.propTypes = {
+      update: React.PropTypes.func.isRequired,
+  };
 export default Register;

@@ -28,9 +28,9 @@ class App extends React.Component {
 		if (this.state.location == "Landing_Page") {
 			displayPage = <Landing updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
 		} else if (this.state.location == "Main_Page"){
-			displayPage = <Main stateProps = {this.state.location}/>;
+			displayPage = <Main updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
 		} else if (this.state.location == "Profile_Page"){
-			displayPage = <Profile stateProps = {this.state.location}/>;
+			displayPage = <Profile updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
 		}
       	return (
 	     	<div>
