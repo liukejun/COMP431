@@ -1,21 +1,16 @@
 require('./main.css')
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
 import {Nav, NavHeader, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {navigatePages} from '../action.js';
+import {getStore} from '../app.js'
+import { connect } from 'react-redux'
+import { logout } from './mainActions.js'
+//renders the nav bar in main page
 class NavContent extends React.Component {
-	updateNavToMain() {
-		var val = "Main_Page";
-		this.props.update(val);
-	}
-	updateNavToLanding() {
-		var val = "Landing_Page";
-		this.props.update(val);
-	}
-	updateNavToProfile() {
-		var val = "Profile_Page";
-		this.props.update(val);
-	}
+	
 	render() {
+		const { toMain, toProfile, toLanding } = this.props
 		return (
 			<Navbar inverse className="navbar navbar-default">
 			    <Navbar.Header>
@@ -26,8 +21,8 @@ class NavContent extends React.Component {
 			    </Navbar.Header>
 			    <Navbar.Collapse>
 			      <Nav>
-			        <NavItem eventKey={1} onClick={this.updateNavToMain.bind(this)}>Home</NavItem>
-			        <NavItem eventKey={2} onClick={this.updateNavToProfile.bind(this)}>Profile</NavItem>
+			        <NavItem eventKey={1} onClick={toMain}>Home</NavItem>
+			        <NavItem eventKey={2} onClick={toProfile}>Profile</NavItem>
 			        <NavDropdown eventKey={3} title="Friend" id="basic-nav-dropdown">
 			          <MenuItem eventKey={3.1}>Action</MenuItem>
 			          <MenuItem eventKey={3.2}>Another action</MenuItem>
@@ -38,7 +33,7 @@ class NavContent extends React.Component {
 			      </Nav>
 			      <Nav pullRight>
 			        <NavItem eventKey={1} href="#"><span className="glyphicon glyphicon-user"></span> My Account</NavItem>
-			        <NavItem eventKey={2} onClick={this.updateNavToLanding.bind(this)}>Log Out</NavItem>
+			        <NavItem eventKey={2} onClick={toLanding}>Log Out</NavItem>
 			      </Nav>
 			    </Navbar.Collapse>
 			  </Navbar>
@@ -46,6 +41,15 @@ class NavContent extends React.Component {
 	}
 }
 NavContent.propTypes = {
-      update: React.PropTypes.func.isRequired,
-  };
-export default NavContent;
+    toMain: PropTypes.func.isRequired,
+    toProfile: PropTypes.func.isRequired,
+    toLanding: PropTypes.func.isRequired
+}
+const Navs = connect(null, dispatch => ({
+    toMain: () => dispatch(navigatePages('Main_Page')),
+    toProfile: () => dispatch(navigatePages('Profile_Page')),
+    toLanding: () => {
+    	dispatch(logout())
+	}
+  }))(NavContent);
+export default Navs;

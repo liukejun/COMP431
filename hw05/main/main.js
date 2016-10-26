@@ -5,26 +5,21 @@ import ReactDOM from 'react-dom';
 import {Nav, NavHeader, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 import NavContent from './nav.js';
-import UserSection from './userSection.js'
+import UserSections from './userSection.js'
 import {AddFriend, FriendSection} from './friendSection.js';
-import PostSection from './post.js';
+import PostSections from './post.js';
 import SearchArticle from '../article/searchArticle.js'
-import Article from '../article/article.js'
+import ArticleViews from '../article/articleView.js'
+//renders the UI architecture of main page
 class Main extends React.Component {
-	update(val) {
-		this.props.updateState(val);
-	}
 	render() {
 		return (
 			<div>
-				<NavContent update={this.update.bind(this)} onChange={this.update}/>
+				<NavContent/>
 				<MainContent />
 				<Footer />
 			</div>
 			)
-	}
-	test(){
-		console.log("1");
 	}
 }
 
@@ -46,7 +41,7 @@ class MainLeft extends React.Component {
 		return (
 			<div>
 				<Col className="col-xs-12 col-sm-12 col-md-4 col-lg-4 well-white">
-					<UserSection />
+					<UserSections />
 					<FriendSection/>
 					<AddFriend/>
 				</Col>
@@ -60,13 +55,13 @@ class MainCenter extends React.Component {
 			<div>
 
 				<Col className="col-xs-12 col-sm-12 col-md-8 col-lg-8 well-white">
-					<PostSection/>
+					<PostSections/>
 				</Col>
 				<Col className="col-xs-12 col-sm-12 col-md-8 col-lg-8 well-white">
 					<SearchArticle/>
 				</Col>
 				<Col className="col-xs-12 col-sm-12 col-md-8 col-lg-8 well-white">
-					<Article/>
+					<ArticleViews/>
 				</Col>
 			</div>
 			)
@@ -82,8 +77,5 @@ class Footer extends React.Component {
 			)
 	}
 }
-Main.propTypes = {
-  		updateState: React.PropTypes.func.isRequired,
-	};
 export default Main;
 export {Footer};

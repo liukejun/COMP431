@@ -1,36 +1,33 @@
 require('react-bootstrap')
 
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+import combineActionsMiddleware from 'redux-combine-actions';
 import createLogger from 'redux-logger'
+import { connect } from 'react-redux'
 
-import Landing from './auth/landing.js';
+import Landings from './auth/landing.js';
 import Main from './main/main.js';
 import Profile from './profile/profile.js';
 import Reducer from './reducer.js'
+import thunk from 'redux-thunk'
+
+const logger = createLogger()
+const store = createStore(Reducer, applyMiddleware(thunk, logger))
 
 class App extends React.Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			location: "Landing_Page"
-		}
-		
-	}
-	updateState(val) {
-		this.setState({location: val});
-	}
+	
    	render() {
    		var displayPage;
-		if (this.state.location == "Landing_Page") {
-			displayPage = <Landing updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
-		} else if (this.state.location == "Main_Page"){
-			displayPage = <Main updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
-		} else if (this.state.location == "Profile_Page"){
-			displayPage = <Profile updateState={this.updateState.bind(this)} onChange={this.updateState}/>;
+   		const { nextPage } = this.props
+		if (nextPage == "Landing_Page") {
+			displayPage = <Landings />;
+		} else if (nextPage == "Main_Page"){
+			displayPage = <Main />;
+		} else if (nextPage == "Profile_Page"){
+			displayPage = <Profile />;
 		}
       	return (
 	     	<div>
@@ -39,20 +36,27 @@ class App extends React.Component {
       	)
    }
 }
-const logger = createLogger()
-const store = createStore(Reducer, applyMiddleware(logger))
-ReactDOM.render((
-	<Provider store={store}>
-        <App />
-    </Provider>
-), document.getElementById('app'))
 
-// ReactDOM.render((
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App}>
-//       <Route path="about" component={About} />
-//       <Route path="home" component={Home} />
-// 	<Route path="contact" component={Contact} />
-//     </Route>
-//   </Router>
-// ), document.getElementById('app'))
+App.propTypes = {
+	nextPage: PropTypes.string.isRequired
+}
+const mapStateToProps = (state) => {
+	return {
+		nextPage: state.navigatePages.nextPage
+	}
+}
+const Apps = connect(
+	mapStateToProps,
+	null
+)(App);
+
+const render = () => {
+	ReactDOM.render((
+		
+		<Provider store={store}>
+	        <Apps/>
+	    </Provider>
+	), document.getElementById('app'))
+}
+render();
+export default Apps;

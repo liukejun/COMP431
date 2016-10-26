@@ -4,7 +4,7 @@ require('react-bootstrap')
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
-
+//the decorated cover content for landing page
 class Cover extends React.Component {
 	render() {
 		return (

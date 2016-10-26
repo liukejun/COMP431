@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for version2.0/profile/updateInfo.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">version2.0/profile/</a> updateInfo.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.7% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>46/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>33/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.92% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/23</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">30 statements, 8 functions, 30 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ></span>require('./profile.css')
+import React, { Component, PropTypes } from 'react'
+import ReactDOM from 'react-dom';
+import {Col, Tooltip} from 'react-bootstrap';
+import validateUpdate from './profileLogic.js';
+<span class="cstat-no" title="statement not covered" >i</span>mport { connect } from 'react-redux'
+//renders the update info in profile page
+class UpdateInfo extends React.Component {
+	render() <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span>
+		const { registerFeedback } = this.props
+		//vaidate the update information and send feedback to user
+<span class="cstat-no" title="statement not covered" >		c</span>onst updateInfo = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			v</span>ar name = this.refs.update_accountName.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar dname = this.refs.update_displayName.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar email = this.refs.update_emailAddress.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar phone = this.refs.update_phoneNumber.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar zipcode = this.refs.update_ZipCode.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar password = this.refs.update_password.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar confirm_password = this.refs.update_password_comfirm.value;
+<span class="cstat-no" title="statement not covered" >			c</span>onsole.log('start to deal with update')
+<span class="cstat-no" title="statement not covered" >			v</span>ar resText = validateUpdate(name, phone, email, zipcode, password, confirm_password)
+<span class="cstat-no" title="statement not covered" >			r</span>egisterFeedback(resText)
+		} 
+<span class="cstat-no" title="statement not covered" >		r</span>eturn(
+			&lt;div&gt;
+				&lt;p className="BoldFont "&gt;Update Information&lt;/p&gt;
+				&lt;div className="form-group"&gt;
+					 &lt;input className="form-control" type="text" name="accountname" ref="update_accountName" placeholder="Account Name"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					
+					&lt;input className="form-control" type="text" name="displayname" ref="update_displayName" placeholder="Display Name"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input className="form-control" type="number" name="phonenumber" ref="update_phoneNumber" placeholder="Phone Number"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input className="form-control" type="text" name="emailaddress" ref="update_emailAddress" placeholder="Email Address"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input className="form-control" type="number" name="zipcode" ref="update_ZipCode" placeholder="Zip Code"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input className="form-control" type="text" name="password" ref="update_password" placeholder="Password"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+	        		&lt;input className="form-control" type="text" name="passwordcfm" ref="update_password_comfirm" placeholder="Comfirm Password"/&gt;
+	      			
+      			&lt;/div&gt;
+				&lt;center&gt;&lt;button className="btn btn-green" onClick={updateInfo}&gt;Update Information&lt;/button&gt;&lt;/center&gt;
+			&lt;/div&gt;
+			)
+	}
+}
+<span class="cstat-no" title="statement not covered" >U</span>pdateInfo.propTypes = {
+    registerFeedback: PropTypes.func.isRequired,
+}
+<span class="cstat-no" title="statement not covered" >c</span>onst UpdateInfos = connect(null, <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >d</span></span>ispatch =&gt; ({
+    registerFeedback: <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>msg) =&gt; dispatch({type: 'ERROR', text: msg})
+	}
+))(UpdateInfo);
+export default UpdateInfos;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 22:20:34 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

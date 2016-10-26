@@ -1,5 +1,23 @@
+//validate register and return corresponding feedback message, notify user of wrong input or success
+function validateRegister(nm, pn, em, btn, zip,pw, pwc) {
+	if (nm == '' || pn == '' || em == '' || btn == '' || zip == '' || pw == '' || pwc == '')
+		return 'All fields must be supplied'
+	if (!validateName(nm))
+		return 'Invalid username. Must start with a letter and can only contains letters and numbers.'
+	if (!validateEmail(em))
+		return 'Invalid email. Must be like a@b.co'
+	if (!validatePhone(pn))
+		return 'Invalid phone number. Should and only contain 10 digits'
+	if (!validateBirth(btn))
+		return 'Invalid birthday or age under 18'
+	if (!validateZip(zip))
+		return 'Invalid zipcode. Must be 5 digits in length, e.g., 77005'
+	if (!validatePwd(pw, pwc))
+		return 'Password do not match'
+	return 'You have registered successfully!'
+}
 // validate register info
-function validateRegisterName(nm){
+export function validateName(nm){
 	//validate account name
 	var nmreg=/[a-zA-Z][a-z0-9A-Z]*/;
 	if(!nmreg.test(nm)){
@@ -7,7 +25,7 @@ function validateRegisterName(nm){
 	}
 	return true;
 }
-function validateRegisterPhone(pn) {
+export function validatePhone(pn) {
 	//validate phone
 	var pnreg= new RegExp("^[0-9]{10}$");
 	if(!pnreg.test(pn)){
@@ -15,7 +33,7 @@ function validateRegisterPhone(pn) {
 	}
 	return true;
 }
-function validateRegisterEmail(em){
+export function validateEmail(em){
 	//validate email address
 	var emreg=/\w+@\w+.\w{2,4}/;
 	if(!emreg.test(em)){
@@ -23,7 +41,7 @@ function validateRegisterEmail(em){
 	}
 	return true;
 }
-function validateRegisterBirth(btn)	{
+function validateBirth(btn)	{
 	//validate birthday
 	if (btn==""||btn==null){
 		return false;
@@ -40,7 +58,7 @@ function validateRegisterBirth(btn)	{
 	}
 	return true;
 }	
-function validateRegisterZip(zip) {
+export function validateZip(zip) {
 	//validate zip code
 	var zipReg = new RegExp("^[0-9]{5}$|^[0-9]{5}-[0-9]{4}$");
 	if(!zipReg.test(zip)){
@@ -48,7 +66,7 @@ function validateRegisterZip(zip) {
 	}
 	return true;
 }		
-function validateRegisterPwd(pw, pwc){
+export function validatePwd(pw, pwc){
 	//validate password
 	if(pw!=pwc){
 		return false;
@@ -56,19 +74,4 @@ function validateRegisterPwd(pw, pwc){
 
 	return true;
 }	
-	
-function validateLoginName(nm){
-	//simple validate for username and password: not empty
-	if (nm==null ||  nm==""){
-		return false;
-	}
-	return true;
-}
-function validateLoginPassword(pwd){
-	if (pwd ==null ||pwd==""){
-		return false;
-	}
-	return true;
-}
-export {validateLoginName, validateLoginPassword};
-export {validateRegisterPwd, validateRegisterZip, validateRegisterName, validateRegisterPhone,validateRegisterBirth,validateRegisterEmail};
+export {validateRegister};

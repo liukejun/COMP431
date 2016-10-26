@@ -1,11 +1,17 @@
 require('./main.css')
 
-import React from 'react';
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
-
-class PostSection extends React.Component {
+import { postText } from '../action.js'
+import { connect } from 'react-redux'
+// renders post new article 
+export class PostSection extends React.Component {
 	render() {
+		const clearPost = () => {
+			this.refs.inputPost.value = ''
+		}
+		const { postTxt } = this.props
 		return (
 			<div>
 				<Row>
@@ -17,19 +23,28 @@ class PostSection extends React.Component {
             			</label>
 					</Col>
 					<Col className="col-md-7 well-white well-image-post">
-						<textarea id="postContent" name="inputPost" className="inputpost" defaultValue="Your post here..."></textarea>
+						<textarea id="postContent" ref="inputPost" className="inputpost" defaultValue="Your post here..."></textarea>
 					</Col>
 				</Row>
 				<Row>
 					<Col className="col-md-6">
-						<button className="btn-cancel" onClick="clearPost()">Cancel</button>
+						<button className="btn-cancel" onClick={clearPost}>Cancel</button>
 					</Col>
 					<Col className="col-md-6">
-						<button className="btn-post">Post</button>
+						<button className="btn-post" onClick={postTxt}>Post</button>
 					</Col>			
 				</Row>
       		</div>
 			);
 	};
 }
-export default PostSection;
+PostSection.propTypes = {
+	postTxt: PropTypes.func.isRequired
+}
+
+const PostSections = connect(null, dispatch => ({
+    postTxt: () => {
+    	dispatch(postText())
+	}
+}))(PostSection);
+export default PostSections;

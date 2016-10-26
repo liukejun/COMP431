@@ -46,7 +46,7 @@ body{
 }
 .btn-update-in-profile{
 	border:none;
-	background-color:#1abc9c;
+	background-color:#3b5998;
 	color:white;
 	border-radius: 5px;
 	
@@ -115,7 +115,7 @@ body{
 .btn-post{
 	width:200px;
 	border:none;
-	background-color:#1abc9c;
+	background-color:#3b5998;
 	color:white;
 	border-radius: 7px;
 	font-weight:bold;
@@ -158,10 +158,6 @@ body{
 	border-radius: 5px;
 	width:50px;
 }
-.title-recommend{
-	color:#808080;
-	font-weight:bold;
-}
 
 
 /* Changes the position of the indicators */
@@ -186,3 +182,33 @@ body{
 .footer-word{
 	color:#3b5998;
 }
+.btn-fix-width-blue{
+	border:none;
+	background-color:#3b5998;
+	color:white;
+	border-radius: 5px;
+	width:200px;
+}
+.btn-fix-width-yellow{
+	border:none;
+	background-color:#FF9F40;
+	color:white;
+	border-radius: 5px;
+	width:200px;
+}
+.btn-fix-width-green{
+	border:none;
+	background-color:#70CF70;
+	color:white;
+	border-radius: 5px;
+	width:200px;
+}
+.comment-style{
+	width: 600px;
+	margin-left: 50px;
+	border:none;
+}
+.post_user_style{
+	font-size: 20px;
+	font-weight: bold;
+}	

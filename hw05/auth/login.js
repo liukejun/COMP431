@@ -1,44 +1,23 @@
 require('./login.css');
-
-import React from 'react';
+import {navigatePages} from '../action.js'
+import { connect } from 'react-redux'
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
 import {Nav, NavHeader, Navbar, NavItem, NavDropdown, MenuItem, Tooltip} from 'react-bootstrap';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 import {validateLoginName, validateLoginPassword} from './landinglogic.js';
-import { login } from '../dummy.js'
-class Login extends React.Component{
-    constructor(props) {
-      super(props);
-      this.state = {
-        showNameTip: false,
-        showPwdTip:false
-      }
-    }
-    updateNav() {
-      var nm=this.refs.username.value;
-      var pwd=this.refs.password.value;
-      if (validateLoginName(nm) && validateLoginPassword(pwd)){
-        var res = login().then(function(result){
-          console.log(result);
-        });
-        //console.log(res);
-        var val = "Main_Page";
-        this.props.update(val);
-      } else {
-          if (!validateLoginName(nm)){
-            this.setState({showNameTip:true});
-          }
-          if (!validateLoginPassword(pwd)){
-            this.setState({showPwdTip:true});
-          }
-          if (validateLoginName(nm))
-            this.setState({showNameTip:false});
-          if (validateLoginPassword(pwd))
-            this.setState({showPwdTip:false});
-      }
-    }
-     render() {
+import {localLogin} from './authActions.js'
+//Login component which renders the sign in part of the nav bar
+export class Login extends React.Component{
+    render() {
+      let newUserName;
+      let newPwd;
+      const {login} = this.props
+      const _login = () => {
+        login(newUserName.value, newPwd.value)
+      } 
+      
       return (
         <Navbar inverse className="navbar navbar-default">
           <Navbar.Header>
@@ -51,33 +30,29 @@ class Login extends React.Component{
             <Nav pullRight>
               <NavItem eventKey={1} href="#" className="navbar-form navbar-right">
                   <div className="form-group">
-                      <input type="text" className="form-control" id="loginUsername" ref="username" placeholder="Username"/>
-                      {
-                      !this.state.showNameTip ? null :
-                      <Tooltip placement="bottom" className="in" id="tooltip-bottom">
-                        Please input correct username.
-                      </Tooltip>
-                    }
+                      <input type="text" className="form-control" id="loginUsername" ref={ (node) => newUserName = node } placeholder="Username"/>
+                      
                   </div>
                   <div className="form-group">
-                    <input type="text" className="form-control" id="loginPwd" ref="password" placeholder="Password"/>
-                    {
-                      !this.state.showPwdTip ? null :
-                      <Tooltip placement="bottom" className="in" id="tooltip-bottom">
-                        Please input correct password.
-                      </Tooltip>
-                    }
+                    <input type="password" className="form-control" id="loginPwd" ref={ (node) => newPwd = node } placeholder="Password"/>
+              
                     
                   </div>
-                  <button type="submit" className="btn btn-primary" id="loginActionBtn" onClick={this.updateNav.bind(this)}>Sign In</button>
+                  <button type="submit" className="btn btn-primary" id="loginActionBtn" onClick={_login}>Sign In</button>
               </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
         )
-     }
+    }
 }
 Login.propTypes = {
-      update: React.PropTypes.func.isRequired,
-  };
-export default Login;
+    login: PropTypes.func.isRequired
+}
+//get the information from redux store
+const LogIn = connect(null, dispatch => ({
+    login: (username, password) => {
+      dispatch(localLogin(username, password))
+    }
+  }))(Login);
+export default LogIn;
