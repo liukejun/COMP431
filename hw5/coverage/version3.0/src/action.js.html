@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for version3.0/src/action.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">version3.0/src/</a> action.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>64/85</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.19% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/64</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const NAVIGATE_PAGE = 'NAVIGATE_PAGE'
+export const CLEAR_ARTICLES = 'CLEAR_ARTICLES'
+export const ADD_ARTICLES = 'ADD_ARTICLES'
+export const ADD_COMMENTS = 'ADD_COMMENTS'
+export const FILTER_ARTICLE = 'FILTER_ARTICLE'
+export const CLEAR_FRIENDS = 'CLEAR_FRIENDS'
+export const ADD_FRIENDS = 'ADD_FRIENDS'
+export const ADD_FRIENDS_HEADLINE = 'ADD_FRIENDS_HEADLINE'
+export const ADD_FRIENDS_AVATAR = 'ADD_FRIENDS_AVATAR'
+export const CLEAR_INFO = 'CLEAR_INFO'
+export const UPDATE_PASSWORD = 'UPDATE_PASSWORD'
+export const UPDATE_NAME = 'UPDATE_NAME'
+export const UPDATE_HEADLINE = 'UPDATE_HEADLINE'
+export const UPDATE_AVATAR = 'UPDATE_AVATAR'
+export const UPDATE_ZIPCODE = 'UPDATE_ZIPCODE'
+export const UPDATE_DOB = 'UPDATE_DOB'
+export const UPDATE_EMAIL = 'UPDATE_EMAIL'
+export const ERROR = 'ERROR'
+export const SUCCESS = 'SUCCESS'
+export const POST_ARTICLE = 'POST_ARTICLE'
+export const ADD_AVATAR = 'ADD_AVATAR'
+//navigate pages according to text parameter
+export <span class="fstat-no" title="function not covered" >function navigatePages(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: NAVIGATE_PAGE,
+		text
+	}
+}
+//clear article states
+export <span class="fstat-no" title="function not covered" >function clearArticles() {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: CLEAR_ARTICLES
+	}
+}
+//add a new article to state
+export <span class="fstat-no" title="function not covered" >function addArticles(id, author, img, date, text, comments, isShow) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_ARTICLES,
+		id,
+		author,
+		img,
+		date,
+		text,
+		comments,
+		isShow
+	}
+}
+// add a new comment to state
+export <span class="fstat-no" title="function not covered" >function addComments(id, author, commentId, date, text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_COMMENTS,
+		id,
+		author,
+		commentId,
+		date,
+		text
+	}
+}
+//change article's isShow property in state according to parameter
+export <span class="fstat-no" title="function not covered" >function filterArticle(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: FILTER_ARTICLE,
+		text
+	}
+}
+//add author's avatar at article in state
+export <span class="fstat-no" title="function not covered" >function addAvatarInArticle(id, avatar) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_AVATAR,
+		id,
+		avatar
+	}
+}
+//clear friends in state
+export <span class="fstat-no" title="function not covered" >function clearFriends() {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: CLEAR_FRIENDS
+	}
+}
+//add friends in state
+export <span class="fstat-no" title="function not covered" >function addFriends(id, headline, avatar) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_FRIENDS,
+		id,
+		headline,
+		avatar
+	}
+}
+//update friend's headline in state
+export <span class="fstat-no" title="function not covered" >function addFriendHeadline(id, headline) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_FRIENDS_HEADLINE,
+		id,
+		headline
+	}
+}
+//update friend's avatar in state
+export <span class="fstat-no" title="function not covered" >function addFriendAvatar(id, avatar) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ADD_FRIENDS_AVATAR,
+		id,
+		avatar
+	}
+}
+//clear user information in state
+export <span class="fstat-no" title="function not covered" >function clearInfo() {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: CLEAR_INFO
+	}
+}
+// add password in state
+export <span class="fstat-no" title="function not covered" >function addPwd(password) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_PASSWORD,
+		password
+	}
+}
+// add username in state
+export <span class="fstat-no" title="function not covered" >function addName(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_NAME,
+		text
+	}
+}
+// add user headline in state
+export <span class="fstat-no" title="function not covered" >function addHeadline(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_HEADLINE,
+		text
+	}
+}
+// add user avatar in state
+export <span class="fstat-no" title="function not covered" >function addAvatar(avatar) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_AVATAR,
+		avatar
+	}
+}
+//add user zipcode in state
+export <span class="fstat-no" title="function not covered" >function addZipcode(zipcode) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_ZIPCODE,
+		zipcode
+	}
+}
+//add user birthday in state
+export <span class="fstat-no" title="function not covered" >function addDOB(dob) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_DOB,
+		dob
+	}
+}
+//add user email in state
+export <span class="fstat-no" title="function not covered" >function addEmail(email) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: UPDATE_EMAIL,
+		email
+	}
+}
+// add new error in state
+export <span class="fstat-no" title="function not covered" >function addError(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: ERROR,
+		text
+	}
+}
+// add success info in state
+export <span class="fstat-no" title="function not covered" >function addSuccess(text) {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: SUCCESS,
+		text
+	}
+}
+// add new article through posting
+export <span class="fstat-no" title="function not covered" >function postText() {</span>
+<span class="cstat-no" title="statement not covered" >	r</span>eturn {
+		type: POST_ARTICLE
+	}
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:50:54 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

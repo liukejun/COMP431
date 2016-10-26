@@ -1,0 +1,7 @@
+--compilers js:babel-core/register
+--require jsdom-global/register
+--require ignore-styles
+--recursive
+--colors
+--timeout 10000
+--bail
