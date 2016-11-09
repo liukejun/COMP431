@@ -1,0 +1,5 @@
+{ 
+     "netid": "kl50",
+  "frontend": "http://ricebook-kejunliu.surge.sh/",
+   "backend": "https://ricebookliukejun.herokuapp.com/"
+}

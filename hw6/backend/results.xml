@@ -1,0 +1,17 @@
+
+
+> stub@1.0.0 test /Users/kejunliu/Documents/COMP531/hw06/backend
+> mocha --opts mocha.opts src/*.spec.js "-R" "xunit"
+
+<testsuite name="Mocha Tests" tests="10" failures="0" errors="0" skipped="0" timestamp="Wed, 09 Nov 2016 02:02:32 GMT" time="0.254">
+<testcase classname="Validate article functionality" name="should Create new article and appears in feed!" time="0.073"/>
+<testcase classname="Validate article functionality" name=" Edit an article and validate changed article text!" time="0.01"/>
+<testcase classname="Validate auth functionality" name="should register a new user!" time="0.009"/>
+<testcase classname="Validate auth functionality" name="should login as test user!" time="0.006"/>
+<testcase classname="Validate following functionality" name="should Add the Follower user and verify following count increases by one!" time="0.004"/>
+<testcase classname="Validate following functionality" name="should Remove the Follower user and verify following count decreases by one!" time="0.006"/>
+<testcase classname="Validate profile functionality" name="should Update headline headline and verify change!" time="0.003"/>
+<testcase classname="Validate profile functionality" name="should  Update user email and verify!" time="0.003"/>
+<testcase classname="Validate profile functionality" name="should Update user zipcode and verify!" time="0.004"/>
+<testcase classname="Validate profile functionality" name="should Update user password and verify!" time="0.005"/>
+</testsuite>
