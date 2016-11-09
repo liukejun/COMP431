@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for version3.0/src/actions.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">version3.0/src/</a> actions.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.98% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.14% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/50</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { expect } from 'chai'
+import mockery from 'mockery'
+import fetch, { mock } from 'mock-fetch'
+&nbsp;
+let navigatePages, addSuccess, addError, resource, url
+beforeEach(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (mockery.enable) {</span>
+<span class="cstat-no" title="statement not covered" >  	m</span>ockery.enable({warnOnUnregistered: false, useCleanCache:true})
+<span class="cstat-no" title="statement not covered" >  	m</span>ockery.registerMock('node-fetch', fetch)
+<span class="cstat-no" title="statement not covered" >  	r</span>equire('node-fetch')
+  }
+  //import client codes after the call of mockery
+<span class="cstat-no" title="statement not covered" >  n</span>avigatePages = require('./action.js').navigatePages
+<span class="cstat-no" title="statement not covered" >  a</span>ddSuccess = require('./action.js').addSuccess
+<span class="cstat-no" title="statement not covered" >  a</span>ddError = require('./action.js').addError
+<span class="cstat-no" title="statement not covered" >  r</span>esource = require('./components/auth/authActions.js').resource
+<span class="cstat-no" title="statement not covered" >  u</span>rl = require('./components/auth/authActions.js').url
+})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >a</span>fterEach(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  if (mockery.enable) {</span>
+<span class="cstat-no" title="statement not covered" >  	m</span>ockery.deregisterMock('node-fetch')
+<span class="cstat-no" title="statement not covered" >  	m</span>ockery.disable()
+  }
+})
+<span class="cstat-no" title="statement not covered" >d</span>escribe('Validate actions', <span class="fstat-no" title="function not covered" >function(){</span>
+	
+<span class="cstat-no" title="statement not covered" >	i</span>t('resource should be a resource (i.e., mock a request)', <span class="fstat-no" title="function not covered" >(done)=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >		m</span>ock(`${url}/headlines`, {
+			method: 'GET',
+			headers: {'Content-Type': 'application/json'},
+			json: {
+        username: 'hi',
+        headlines: { username: 'hi', headline: 'ok'}
+      }
+		})
+<span class="cstat-no" title="statement not covered" >    c</span>onst expected = {
+      username: 'hi',
+      headlines: { username: 'hi', headline: 'ok'}
+    }
+<span class="cstat-no" title="statement not covered" >		r</span>esource('GET', 'headlines').then(<span class="fstat-no" title="function not covered" >(response) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			e</span>xpect(response).to.eql(expected);
+		})
+		.then(done)
+		.catch(done)
+	})
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t ('resource should give me the http error',<span class="fstat-no" title="function not covered" >(done)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >    r</span>esource('GET', 'headline')
+    .then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >r</span></span>esponse=&gt;console.log(response))
+    .catch(<span class="fstat-no" title="function not covered" >error =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      e</span>xpect(error.message.indexOf('headline')).to.be.at.least(0)
+<span class="cstat-no" title="statement not covered" >      e</span>xpect(error).to.exist
+<span class="cstat-no" title="statement not covered" >      d</span>one()
+    }).catch(done)
+  })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should be able to login/POST', <span class="fstat-no" title="function not covered" >(done)=&gt;{</span>
+    // the result from the mocked AJAX call
+<span class="cstat-no" title="statement not covered" >        c</span>onst username = 'someuser'
+<span class="cstat-no" title="statement not covered" >        c</span>onst password = 'somepassword'
+<span class="cstat-no" title="statement not covered" >        m</span>ock(`${url}/login`,{
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            json:{username, result:'success'}
+        })
+<span class="cstat-no" title="statement not covered" >        r</span>esource('POST', 'login', {username, password})
+        .then(<span class="fstat-no" title="function not covered" >(response)=&gt;{</span>
+<span class="cstat-no" title="statement not covered" >            e</span>xpect(response.username).to.eql(username)
+<span class="cstat-no" title="statement not covered" >            e</span>xpect(response.result).to.eql('success')
+        })
+        .then(done)
+        .catch(done)
+    })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should update error message', <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >		l</span>et text = 'error'
+<span class="cstat-no" title="statement not covered" >    	l</span>et expectedAction = {
+      		type: 'ERROR',
+      		text
+    	}
+<span class="cstat-no" title="statement not covered" >    	e</span>xpect(addError(text)).to.eql(expectedAction)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should update success message', <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >		l</span>et text = 'success'
+<span class="cstat-no" title="statement not covered" >    	l</span>et expectedAction = {
+      		type: 'SUCCESS',
+      		text
+    	}
+<span class="cstat-no" title="statement not covered" >    	e</span>xpect(addSuccess(text)).to.eql(expectedAction)
+	})
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	i</span>t('should navigate', <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >		l</span>et text = 'Landing_Page'
+<span class="cstat-no" title="statement not covered" >    	l</span>et expectedAction = {
+      		type: 'NAVIGATE_PAGE',
+      		text
+    	}
+<span class="cstat-no" title="statement not covered" >    	e</span>xpect(navigatePages(text)).to.eql(expectedAction)
+	})
+&nbsp;
+})</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:50:54 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
