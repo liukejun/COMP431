@@ -1,0 +1,70 @@
+curl -X POST http://localhost:3001/register -H 'Content-Type: application/json' -d '{ "username" :
+> "kl50test", "password": "xyz"}'
+
+
+curl -X POST http://localhost:3001/login -H 'Content-Type: application/json' -d '{ "username" :
+> "kl50test", "password": "xyz"}' -i
+
+curl -X POST http://localhost:3001/article -H 'Content-Type: application/json' -d '{ "text" :
+> "test post"}' -i
+
+curl http://localhost:3001/articles/4
+
+curl -X PUT http://localhost:3001/logout -H 'Content-Type: application/json' --cookie 'sid=1'
+
+curl -H 'Content-Type: application/json' --cookie 'sid=1' http://localhost:3001/logout -X
+
+curl -X PUT http://localhost:3001/articles/1 -H 'Content-Type: application/json' -d '{ "text" :
+> "test", "commentId": "-1"}'
+curl -X PUT http://localhost:3001/headline -H 'Content-Type: application/json' -d '{ "headline" : "test this" }'
+
+curl -X PUT http://localhost:3001/email -H 'Content-Type: application/json' -d '{ "email" : "test email" }'
+
+curl -X PUT http://localhost:3001/zipcode -H 'Content-Type: application/json' -d '{ "zipcode" : "test zipcode" }'
+
+curl -X PUT http://localhost:3001/avatar -H 'Content-Type: application/json' -d '{ "img" : "test avatar" }'
+
+curl http://localhost:3001/headlines/kl50
+
+curl http://localhost:3001/email/kl50
+
+curl http://localhost:3001/zipcode/kl50
+
+curl http://localhost:3001/avatars/kl50
+
+curl http://localhost:3001/dob/kl50
+
+curl -X PUT http://localhost:3001/following/kl5 -H 'Content-Type: application/json'
+
+curl -X DELETE http://localhost:3001/following/kl5 -H 'Content-Type: application/json'
+
+
+
+
+
+
+
+
+
+
+const isLoggedIn = (req, res, next) => {
+	var sid = req.cookies[cookieKey]
+
+	if(!sid) {
+		return res.status(401).send('sid undefined - user session does not exist')
+	}
+	var username = sessionUser[sids]
+	if (username) {
+		req.username = username
+		next()
+	} else {
+		res.status(401).send('user session does not exist')
+	}
+}
+const logout = (req, res) => {
+	const username = req.username
+	const sid = req.cookies[cookieKey]
+	delete sessionUser[sid]
+	res.clearCookie(cookieKey)
+	res.send('OK')
+}
