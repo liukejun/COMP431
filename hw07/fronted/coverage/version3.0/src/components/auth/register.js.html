@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for version3.0/src/components/auth/register.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">version3.0/src/components/auth/</a> register.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>48/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.29% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>33/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.92% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">29.63% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/27</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">29 statements, 8 functions, 30 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">require('./login.css')
+<span class="cstat-no" title="statement not covered" >r</span>equire('react-bootstrap')
+&nbsp;
+import React, { Component, PropTypes } from 'react'
+import ReactDOM from 'react-dom';
+import {Grid, Row, Col, Image, Tooltip} from 'react-bootstrap';
+import { connect } from 'react-redux'
+import {validateRegister} from './landinglogic.js';
+import { addSuccess, addError } from '../../action.js'
+//Register component which renders the user sign in UI
+class Register extends React.Component {	
+		
+	render() <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span>
+		const { registerFeedback } = this.props
+		//validate register information and get feedback msg
+<span class="cstat-no" title="statement not covered" >		c</span>onst navToMain = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >			v</span>ar aname = this.refs.accountname.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar dname = this.refs.displayname.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar email = this.refs.email.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar phone = this.refs.phone.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar birth = this.refs.birth.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar zipcode = this.refs.zipcode.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar password = this.refs.password.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar confirm_password = this.refs.confirm_password.value;
+<span class="cstat-no" title="statement not covered" >			v</span>ar resText = validateRegister(aname, phone, email, birth, zipcode, password, confirm_password)
+<span class="cstat-no" title="statement not covered" >			r</span>egisterFeedback(resText)
+		}
+<span class="cstat-no" title="statement not covered" >		r</span>eturn (
+			&lt;div&gt;
+				
+				&lt;h1&gt;Sign Up&lt;/h1&gt;
+&nbsp;
+				&lt;div className="form-group"&gt;
+&nbsp;
+					&lt;input type="text" placeholder="Account Name" ref="accountname" className="form-control" /&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="text" placeholder="Display Name" ref="displayname" className="form-control" /&gt;
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="email" placeholder="Email Address" ref="email" className="form-control" /&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="number" placeholder="Phone Number" ref="phone" className="form-control"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="date" ref="birth" name="birthday" className="form-control"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="number" placeholder="Zip Code" ref="zipcode" className="form-control" /&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="password" placeholder="Password" ref="password" className="form-control"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;input type="password" placeholder="Confirm Password" ref="confirm_password" className="form-control"/&gt;
+					
+				&lt;/div&gt;
+				&lt;div className="form-group"&gt;
+					&lt;Row&gt;
+						&lt;Col className="col-sm-6 col-sm-offset-3"&gt;
+							&lt;input type="submit" name="register-submit" id="register-submit" className="form-control btn btn-register" value="Sign Up" onClick={navToMain}/&gt;
+						&lt;/Col&gt;
+					&lt;/Row&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			);
+	}
+}
+<span class="cstat-no" title="statement not covered" >R</span>egister.propTypes = {
+    registerFeedback: PropTypes.func.isRequired,
+}
+<span class="cstat-no" title="statement not covered" >c</span>onst Registers = connect(null, <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >d</span></span>ispatch =&gt; ({
+    registerFeedback: <span class="fstat-no" title="function not covered" >(msg) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    	if (msg == 'You have registered successfully!')</span>
+<span class="cstat-no" title="statement not covered" >    		dispatch(addSuccess(msg))</span>
+    	else
+<span class="cstat-no" title="statement not covered" >    		d</span>ispatch(addError(msg))
+    	}
+	}
+))(Register);
+export default Registers;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:50:54 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
