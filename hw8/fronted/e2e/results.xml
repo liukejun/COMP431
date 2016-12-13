@@ -1,0 +1,18 @@
+
+> starter@1.0.0 e2e:base /Users/kejunliu/Documents/COMP531/hw06/fronted
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="12" failures="0" errors="0" skipped="0" timestamp="Mon, 07 Nov 2016 02:41:06 GMT" time="57.574">
+<testcase classname="Test main(article) Page" name="should create new article and validate article appears in feed" time="2.957"/>
+<testcase classname="Test main(article) Page" name="should edit an article and validate changed article text" time="2.785"/>
+<testcase classname="Test main(article) Page" name="should search a special article and verify" time="2.778"/>
+<testcase classname="Test landing(login) Page" name="should log in as the test user" time="5.089"/>
+<testcase classname="Test main(headline, follower) Page" name="should Update headline and verify change" time="1.781"/>
+<testcase classname="Test main(headline, follower) Page" name="should Remove the Follower user and verify following count decreases by one" time="1.343"/>
+<testcase classname="Test main(headline, follower) Page" name="should Add the Follower user and verify following count increases by one" time="1.422"/>
+<testcase classname="Test Profile Page" name="should Update user email and verify" time="2.48"/>
+<testcase classname="Test Profile Page" name="should Update user zipcode and verify" time="2.421"/>
+<testcase classname="Test Profile Page" name="should Update user password and verify" time="2.6"/>
+<testcase classname="Test landing(regsiter) Page" name="should regsiter new user" time="9.726"/>
+<testcase classname="shutdown" name="now" time="0.108"/>
+</testsuite>
